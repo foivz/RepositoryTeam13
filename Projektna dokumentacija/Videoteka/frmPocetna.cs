@@ -52,5 +52,19 @@ namespace Videoteka
             frmPregledSvihFilmova.Show();
         }
 
+        private void zaposlenikaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmPregledZaposlenika frmPregledZaposlenika = new frmPregledZaposlenika();
+            frmPregledZaposlenika.MdiParent = this;
+            frmPregledZaposlenika.Show();
+        }
+
+        private void clanovaToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmPregledClanova frmPregledClanova = new frmPregledClanova();
+            frmPregledClanova.MdiParent = this;
+            frmPregledClanova.Show();
+        }
+
     }
 }

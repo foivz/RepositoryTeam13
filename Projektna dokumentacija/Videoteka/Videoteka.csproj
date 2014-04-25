@@ -62,6 +62,12 @@
     <Compile Include="frmPosudbaVracanje.Designer.cs">
       <DependentUpon>frmPosudbaVracanje.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmPregledClanova.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPregledClanova.Designer.cs">
+      <DependentUpon>frmPregledClanova.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmPregledPosudjenihFilmovaPojedinogClana.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,6 +85,12 @@
     </Compile>
     <Compile Include="frmPregledSvihFilmova.Designer.cs">
       <DependentUpon>frmPregledSvihFilmova.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPregledZaposlenika.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPregledZaposlenika.Designer.cs">
+      <DependentUpon>frmPregledZaposlenika.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
