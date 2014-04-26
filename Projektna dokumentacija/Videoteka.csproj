@@ -62,6 +62,48 @@
     <Compile Include="frmPosudbaVracanje.Designer.cs">
       <DependentUpon>frmPosudbaVracanje.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmPregledClanova.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPregledClanova.Designer.cs">
+      <DependentUpon>frmPregledClanova.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPregledPosudjenihFilmovaPojedinogClana.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPregledPosudjenihFilmovaPojedinogClana.Designer.cs">
+      <DependentUpon>frmPregledPosudjenihFilmovaPojedinogClana.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPregledPosudjenihFilmovaSvihClanova.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPregledPosudjenihFilmovaSvihClanova.Designer.cs">
+      <DependentUpon>frmPregledPosudjenihFilmovaSvihClanova.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPregledSvihFilmova.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPregledSvihFilmova.Designer.cs">
+      <DependentUpon>frmPregledSvihFilmova.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPregledZaposlenika.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPregledZaposlenika.Designer.cs">
+      <DependentUpon>frmPregledZaposlenika.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUnosClana.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUnosClana.Designer.cs">
+      <DependentUpon>frmUnosClana.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUnosFilma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUnosFilma.Designer.cs">
+      <DependentUpon>frmUnosFilma.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmPocetna.resx">
@@ -69,6 +111,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmPosudbaNova.resx">
       <DependentUpon>frmPosudbaNova.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUnosClana.resx">
+      <DependentUpon>frmUnosClana.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUnosFilma.resx">
+      <DependentUpon>frmUnosFilma.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
