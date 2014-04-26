@@ -92,6 +92,12 @@
     <Compile Include="frmPregledZaposlenika.Designer.cs">
       <DependentUpon>frmPregledZaposlenika.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmPrijava.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrijava.Designer.cs">
+      <DependentUpon>frmPrijava.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmUnosClana.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +117,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmPosudbaNova.resx">
       <DependentUpon>frmPosudbaNova.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrijava.resx">
+      <DependentUpon>frmPrijava.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmUnosClana.resx">
       <DependentUpon>frmUnosClana.cs</DependentUpon>
