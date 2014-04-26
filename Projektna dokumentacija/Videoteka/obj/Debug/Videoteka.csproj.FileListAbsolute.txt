@@ -1,1 +1,13 @@
-C:\Users\Marko\Desktop\New folder (2)\Videoteka\bin\Debug\Videoteka.exe.config
+C:\Users\Tomislav\Desktop\Videoteka\Videoteka\bin\Debug\Videoteka.exe.config
+C:\Users\Tomislav\Desktop\Videoteka\Videoteka\bin\Debug\Videoteka.exe
+C:\Users\Tomislav\Desktop\Videoteka\Videoteka\bin\Debug\Videoteka.pdb
+C:\Users\Tomislav\Desktop\Videoteka\Videoteka\obj\Debug\Videoteka.csprojResolveAssemblyReference.cache
+C:\Users\Tomislav\Desktop\Videoteka\Videoteka\obj\Debug\Videoteka.frmPocetna.resources
+C:\Users\Tomislav\Desktop\Videoteka\Videoteka\obj\Debug\Videoteka.frmPosudbaNova.resources
+C:\Users\Tomislav\Desktop\Videoteka\Videoteka\obj\Debug\Videoteka.frmPrijava.resources
+C:\Users\Tomislav\Desktop\Videoteka\Videoteka\obj\Debug\Videoteka.frmUnosClana.resources
+C:\Users\Tomislav\Desktop\Videoteka\Videoteka\obj\Debug\Videoteka.frmUnosFilma.resources
+C:\Users\Tomislav\Desktop\Videoteka\Videoteka\obj\Debug\Videoteka.Properties.Resources.resources
+C:\Users\Tomislav\Desktop\Videoteka\Videoteka\obj\Debug\Videoteka.csproj.GenerateResource.Cache
+C:\Users\Tomislav\Desktop\Videoteka\Videoteka\obj\Debug\Videoteka.exe
+C:\Users\Tomislav\Desktop\Videoteka\Videoteka\obj\Debug\Videoteka.pdb
