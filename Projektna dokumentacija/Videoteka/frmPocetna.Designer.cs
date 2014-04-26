@@ -35,7 +35,7 @@
             this.novaPosudbaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.vracanjeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuUnos = new System.Windows.Forms.ToolStripMenuItem();
-            this.članovaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.clanovaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.filmovaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.izvjestajiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.zaposlenikaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -105,23 +105,25 @@
             // toolStripMenuUnos
             // 
             this.toolStripMenuUnos.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.članovaToolStripMenuItem,
+            this.clanovaToolStripMenuItem,
             this.filmovaToolStripMenuItem});
             this.toolStripMenuUnos.Name = "toolStripMenuUnos";
             this.toolStripMenuUnos.Size = new System.Drawing.Size(46, 20);
             this.toolStripMenuUnos.Text = "Unos";
             // 
-            // članovaToolStripMenuItem
+            // clanovaToolStripMenuItem
             // 
-            this.članovaToolStripMenuItem.Name = "članovaToolStripMenuItem";
-            this.članovaToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
-            this.članovaToolStripMenuItem.Text = "Članova";
+            this.clanovaToolStripMenuItem.Name = "clanovaToolStripMenuItem";
+            this.clanovaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.clanovaToolStripMenuItem.Text = "Članova";
+            this.clanovaToolStripMenuItem.Click += new System.EventHandler(this.clanovaToolStripMenuItem_Click);
             // 
             // filmovaToolStripMenuItem
             // 
             this.filmovaToolStripMenuItem.Name = "filmovaToolStripMenuItem";
-            this.filmovaToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
+            this.filmovaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.filmovaToolStripMenuItem.Text = "Filmova";
+            this.filmovaToolStripMenuItem.Click += new System.EventHandler(this.filmovaToolStripMenuItem_Click);
             // 
             // izvjestajiToolStripMenuItem
             // 
@@ -216,7 +218,7 @@
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuUnos;
-        private System.Windows.Forms.ToolStripMenuItem članovaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem clanovaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem filmovaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem izvjestajiToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem zaposlenikaToolStripMenuItem;

@@ -66,5 +66,19 @@ namespace Videoteka
             frmPregledClanova.Show();
         }
 
+        private void clanovaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmUnosClana frmUnosClana = new frmUnosClana();
+            frmUnosClana.MdiParent = this;
+            frmUnosClana.Show();
+        }
+
+        private void filmovaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmUnosFilma frmUnosFilma = new frmUnosFilma();
+            frmUnosFilma.MdiParent = this;
+            frmUnosFilma.Show();
+        }
+
     }
 }
