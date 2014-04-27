@@ -11,3 +11,4 @@ C:\Users\Marija\Documents\GitHub\RepositoryTeam13\Projektna dokumentacija\Videot
 C:\Users\Marija\Documents\GitHub\RepositoryTeam13\Projektna dokumentacija\Videoteka\obj\Debug\Videoteka.csproj.GenerateResource.Cache
 C:\Users\Marija\Documents\GitHub\RepositoryTeam13\Projektna dokumentacija\Videoteka\obj\Debug\Videoteka.exe
 C:\Users\Marija\Documents\GitHub\RepositoryTeam13\Projektna dokumentacija\Videoteka\obj\Debug\Videoteka.pdb
+C:\Users\Marija\Documents\GitHub\RepositoryTeam13\Projektna dokumentacija\Videoteka\obj\Debug\Videoteka.frmPrijava.resources
