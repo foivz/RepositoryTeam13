@@ -43,3 +43,11 @@ C:\Users\Tomislav\Desktop\pi\Videoteka\Videoteka\bin\Debug\Baza_podataka.dll
 C:\Users\Tomislav\Desktop\pi\Videoteka\Videoteka\bin\Debug\System.Data.SQLite.dll
 C:\Users\Tomislav\Desktop\pi\Videoteka\Videoteka\bin\Debug\Baza_podataka.pdb
 C:\Users\Tomislav\Desktop\pi\Videoteka\Videoteka\bin\Debug\VideotekaBaza.db
+C:\Users\Tomislav\Desktop\pi\Videoteka\Videoteka\obj\Debug\Videoteka.frmPregledClanova.resources
+C:\Users\Tomislav\Desktop\pi\Videoteka\Videoteka\obj\Debug\Videoteka.frmPregledPosudjenihFilmovaPojedinogClana.resources
+C:\Users\Tomislav\Desktop\pi\Videoteka\Videoteka\obj\Debug\Videoteka.frmPregledPosudjenihFilmovaSvihClanova.resources
+C:\Users\Tomislav\Desktop\pi\Videoteka\Videoteka\obj\Debug\Videoteka.frmPregledSvihFilmova.resources
+C:\Users\Tomislav\Desktop\pi\Videoteka\Videoteka\obj\Debug\Videoteka.frmPosudbaVracanje.resources
+C:\Users\Tomislav\Desktop\pi\Videoteka\Videoteka\obj\Debug\Videoteka.frmIzvjesaji.resources
+C:\Users\Tomislav\Desktop\pi\Videoteka\Videoteka\obj\Debug\RdlCompile.cache
+C:\Users\Tomislav\Desktop\pi\Videoteka\Videoteka\obj\Debug\RdlCompile.compiled

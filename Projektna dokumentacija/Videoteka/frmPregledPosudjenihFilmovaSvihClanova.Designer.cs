@@ -54,8 +54,9 @@
             this.btnZatvori.Name = "btnZatvori";
             this.btnZatvori.Size = new System.Drawing.Size(75, 23);
             this.btnZatvori.TabIndex = 8;
-            this.btnZatvori.Text = "&Zatvori";
+            this.btnZatvori.Text = "Zatvori";
             this.btnZatvori.UseVisualStyleBackColor = true;
+            this.btnZatvori.Click += new System.EventHandler(this.btnZatvori_Click);
             // 
             // dgvPosudjeniFilmovi
             // 
@@ -81,10 +82,12 @@
             this.ClientSize = new System.Drawing.Size(748, 293);
             this.Controls.Add(this.panelPozadina);
             this.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.MinimumSize = new System.Drawing.Size(694, 252);
             this.Name = "frmPregledPosudjenihFilmovaSvihClanova";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
-            this.Text = "Pregled posuđenih filmova";
+            this.Text = "Pregled svih posuđenih filmova";
+            this.Load += new System.EventHandler(this.frmPregledPosudjenihFilmovaSvihClanova_Load);
             this.panelPozadina.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPosudjeniFilmovi)).EndInit();
             this.ResumeLayout(false);

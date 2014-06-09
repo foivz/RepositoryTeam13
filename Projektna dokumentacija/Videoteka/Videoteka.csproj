@@ -35,8 +35,11 @@
     <Reference Include="Baza_podataka">
       <HintPath>..\Baza_podataka\bin\Debug\Baza_podataka.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -47,6 +50,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmIzvjesaji.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmIzvjesaji.Designer.cs">
+      <DependentUpon>frmIzvjesaji.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmPocetna.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,11 +124,21 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="rpPosudbaVraceni.rdlc" />
+    <EmbeddedResource Include="rpPosudba.rdlc" />
+    <EmbeddedResource Include="rpZaposlenici.rdlc" />
+    <EmbeddedResource Include="rpFilmovi.rdlc" />
+    <EmbeddedResource Include="frmIzvjesaji.resx">
+      <DependentUpon>frmIzvjesaji.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmPocetna.resx">
       <DependentUpon>frmPocetna.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPosudbaNova.resx">
       <DependentUpon>frmPosudbaNova.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPosudbaVracanje.resx">
+      <DependentUpon>frmPosudbaVracanje.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPregledClanova.resx">
       <DependentUpon>frmPregledClanova.cs</DependentUpon>
@@ -154,6 +173,11 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="rpClanovi.rdlc" />
+    <None Include="Properties\DataSources\Baza_podataka.pogledClanovi.datasource" />
+    <None Include="Properties\DataSources\Baza_podataka.pogledPosudba.datasource" />
+    <None Include="Properties\DataSources\Baza_podataka.pogledZaposlenici.datasource" />
+    <None Include="Properties\DataSources\Baza_podataka.tablicaFilm.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

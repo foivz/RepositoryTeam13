@@ -36,7 +36,7 @@ namespace Videoteka
             {
                 txtIme.Text = osoba.ime;
                 txtPrezime.Text = osoba.prezime;
-                txtAdresa.Text = osoba.adresa;
+                txtEmail.Text = osoba.email;
                 txtTelefon.Text = osoba.telefon;
                 txtMjClanarina.Text = clan.MjClanarina.ToString();
                 try
@@ -61,7 +61,7 @@ namespace Videoteka
             {
                 txtIme.Text = "";
                 txtPrezime.Text = "";
-                txtAdresa.Text = "";
+                txtEmail.Text = "";
                 txtTelefon.Text = "";
                 txtMjClanarina.Text = "50";
                 DateTime datum = DateTime.Now.AddMonths(1); // današnji datum uvećan za 1 mjesec
@@ -73,16 +73,16 @@ namespace Videoteka
 
         private void btnSpremi_Click(object sender, EventArgs e)
         {
-            if (txtIme.Text == "" || txtPrezime.Text == "" || txtAdresa.Text == "" || txtTelefon.Text == "" || txtMjClanarina.Text == "")
+            if (txtIme.Text == "" || txtPrezime.Text == "" || txtEmail.Text == "" || txtTelefon.Text == "" || txtMjClanarina.Text == "")
             {
-                MessageBox.Show("Prije pohrane morate popuniti sva polja!", "Pogreška...", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Prije pohrane morate popuniti sva polja!", "Pogreška", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
             float provjera;
             float.TryParse(txtMjClanarina.Text, out provjera); // provjera unosa mjesečne članarine da su samo brojevi
             if (provjera == 0) // 0 pogreska
             {
-                MessageBox.Show("Neispravan unos iznosa mjesečne članarine!", "Pogreška...", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Neispravan unos iznosa mjesečne članarine!", "Pogreška", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txtMjClanarina.Focus();
                 return;
             }
@@ -104,25 +104,27 @@ namespace Videoteka
                 // spremanje u tablicu osoba
                 osoba.ime = txtIme.Text;
                 osoba.prezime = txtPrezime.Text;
-                osoba.adresa = txtAdresa.Text;
+                osoba.email = txtEmail.Text;
                 osoba.telefon = txtTelefon.Text;
 
                 osoba.Spremi();
-                    
-                // dohvaca automatski generirani id za osobu
-                int osobaID = osoba.DohvatiZadnjiID();
 
-                // spremanje u tablicu clan
-                clan.idOsoba = osobaID;
+                if (novi)
+                {
+                    // dohvaca automatski generirani id za osobu
+                    int osobaID = osoba.DohvatiZadnjiID();
+                    // spremanje u tablicu clan
+                    clan.idOsoba = osobaID;
+                }
+
                 clan.datum_isteka_clanarine = pickerMjClanarina.Value.ToShortDateString();
                 clan.MjClanarina = float.Parse(txtMjClanarina.Text);
                     
                 clan.Spremi();
 
-
                 if (novi) // nakon unosa pitanje za dodavanje jos jednog člana
                 {
-                    switch (MessageBox.Show("Želite li dodati još jednog člana?", "Informacija...", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
+                    switch (MessageBox.Show("Želite li dodati još jednog člana?", "Informacija", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
                     {
                         case DialogResult.Yes:
                             osoba = null; // resetiramo objekte i brisemo polja
@@ -137,7 +139,7 @@ namespace Videoteka
             catch (Exception)
             {
                 // u slučaju pogreške ispis poruke
-                MessageBox.Show("Član nije pohranjen, dogodila se pogreška pri spremanju člana!", "Pogreška...", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Član nije pohranjen, dogodila se pogreška pri spremanju člana!", "Pogreška", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 

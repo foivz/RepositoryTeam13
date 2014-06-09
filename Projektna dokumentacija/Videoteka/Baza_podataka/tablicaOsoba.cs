@@ -10,7 +10,7 @@ namespace Baza_podataka
         private int p_idOsoba;
         private string p_ime;
         private string p_prezime;
-        private string p_adresa;
+        private string p_email;
         private string p_telefon;
 
 
@@ -34,7 +34,7 @@ namespace Baza_podataka
                 p_idOsoba = int.Parse(dr["idOsoba"].ToString());
                 p_ime = dr["ime"].ToString();
                 p_prezime = dr["prezime"].ToString();
-                p_adresa = dr["adresa"].ToString();
+                p_email = dr["email"].ToString();
                 p_telefon = dr["telefon"].ToString();
             }
 
@@ -49,7 +49,7 @@ namespace Baza_podataka
             {
                 return p_idOsoba;
             }
-            set
+            private set
             {
                 if (p_idOsoba != value) p_idOsoba = value;
             }
@@ -86,17 +86,17 @@ namespace Baza_podataka
         }
 
         /// <summary>
-        /// Adresa osobe
+        /// Email osobe
         /// </summary>
-        public string adresa
+        public string email
         {
             get
             {
-                return p_adresa;
+                return p_email;
             }
             set
             {
-                if (p_adresa != value) p_adresa = value;
+                if (p_email != value) p_email = value;
             }
         }
 
@@ -125,13 +125,13 @@ namespace Baza_podataka
             string sqlUpit = "";
             if (idOsoba == 0) // Unos
             {
-                sqlUpit = "INSERT INTO Osoba (ime, prezime, adresa, telefon) VALUES ('" + ime + "','" + prezime + "','" + adresa + "','" + telefon + "')";
+                sqlUpit = "INSERT INTO Osoba (ime, prezime, email, telefon) VALUES ('" + ime + "','" + prezime + "','" + email + "','" + telefon + "')";
             }
             else // Ažuriranje
             {
                 sqlUpit = "UPDATE Osoba SET ime = '" + ime
                 + "', prezime = '" + prezime
-                + "', adresa = '" + adresa
+                + "', email = '" + email
                 + "', telefon = '" + telefon
                + "' WHERE idOsoba = " + idOsoba;
             }

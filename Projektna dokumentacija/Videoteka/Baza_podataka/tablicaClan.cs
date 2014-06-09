@@ -171,11 +171,11 @@ namespace Baza_podataka
         /// <summary>
         /// Dohvaća clana prema trazenom jedinstvenom identifikatoru
         /// </summary>
-        /// <param name="trazeniID">Jedinstveni identifikator clana</param>
+        /// <param name="trazeniID">Jedinstveni identifikator clana prosljedjen kao string</param>
         /// <returns>Clan</returns>
-        public static tablicaClan DohvatiClanaPrekoID(int trazeniID)
+        public static tablicaClan DohvatiClanaPrekoID(string trazeniID)
         {
-            string sqlUpit = "SELECT * FROM Clan WHERE idClan = " + trazeniID.ToString();
+            string sqlUpit = "SELECT * FROM Clan WHERE idClan = " + trazeniID;
             tablicaClan clan = new tablicaClan(Baza_podataka.Instance.DohvatiDataReader(sqlUpit));
             return clan;
         }

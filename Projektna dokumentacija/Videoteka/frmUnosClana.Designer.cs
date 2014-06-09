@@ -32,8 +32,8 @@
             this.txtIme = new System.Windows.Forms.TextBox();
             this.lblPrezime = new System.Windows.Forms.Label();
             this.txtPrezime = new System.Windows.Forms.TextBox();
-            this.txtAdresa = new System.Windows.Forms.TextBox();
-            this.lblAdresa = new System.Windows.Forms.Label();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.lblEmail = new System.Windows.Forms.Label();
             this.txtTelefon = new System.Windows.Forms.TextBox();
             this.lblTelefon = new System.Windows.Forms.Label();
             this.gbOsoba = new System.Windows.Forms.GroupBox();
@@ -82,22 +82,22 @@
             this.txtPrezime.Size = new System.Drawing.Size(197, 21);
             this.txtPrezime.TabIndex = 2;
             // 
-            // txtAdresa
+            // txtEmail
             // 
-            this.txtAdresa.Location = new System.Drawing.Point(98, 73);
-            this.txtAdresa.MaxLength = 45;
-            this.txtAdresa.Name = "txtAdresa";
-            this.txtAdresa.Size = new System.Drawing.Size(197, 21);
-            this.txtAdresa.TabIndex = 3;
+            this.txtEmail.Location = new System.Drawing.Point(98, 73);
+            this.txtEmail.MaxLength = 45;
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(197, 21);
+            this.txtEmail.TabIndex = 3;
             // 
-            // lblAdresa
+            // lblEmail
             // 
-            this.lblAdresa.AutoSize = true;
-            this.lblAdresa.Location = new System.Drawing.Point(17, 76);
-            this.lblAdresa.Name = "lblAdresa";
-            this.lblAdresa.Size = new System.Drawing.Size(41, 13);
-            this.lblAdresa.TabIndex = 6;
-            this.lblAdresa.Text = "Adresa";
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Location = new System.Drawing.Point(17, 76);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(41, 13);
+            this.lblEmail.TabIndex = 6;
+            this.lblEmail.Text = "Email";
             // 
             // txtTelefon
             // 
@@ -121,11 +121,11 @@
             this.gbOsoba.Controls.Add(this.txtTelefon);
             this.gbOsoba.Controls.Add(this.lblTelefon);
             this.gbOsoba.Controls.Add(this.txtIme);
-            this.gbOsoba.Controls.Add(this.lblAdresa);
+            this.gbOsoba.Controls.Add(this.lblEmail);
             this.gbOsoba.Controls.Add(this.lblIme);
             this.gbOsoba.Controls.Add(this.lblPrezime);
             this.gbOsoba.Controls.Add(this.txtPrezime);
-            this.gbOsoba.Controls.Add(this.txtAdresa);
+            this.gbOsoba.Controls.Add(this.txtEmail);
             this.gbOsoba.Location = new System.Drawing.Point(12, 12);
             this.gbOsoba.Name = "gbOsoba";
             this.gbOsoba.Size = new System.Drawing.Size(314, 158);
@@ -181,7 +181,8 @@
             // 
             // btnSpremi
             // 
-            this.btnSpremi.Location = new System.Drawing.Point(434, 199);
+            this.btnSpremi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSpremi.Location = new System.Drawing.Point(449, 199);
             this.btnSpremi.Name = "btnSpremi";
             this.btnSpremi.Size = new System.Drawing.Size(97, 23);
             this.btnSpremi.TabIndex = 7;
@@ -191,7 +192,8 @@
             // 
             // btnPobrisi
             // 
-            this.btnPobrisi.Location = new System.Drawing.Point(537, 199);
+            this.btnPobrisi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnPobrisi.Location = new System.Drawing.Point(552, 199);
             this.btnPobrisi.Name = "btnPobrisi";
             this.btnPobrisi.Size = new System.Drawing.Size(97, 23);
             this.btnPobrisi.TabIndex = 8;
@@ -204,7 +206,7 @@
             this.AcceptButton = this.btnSpremi;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(661, 254);
+            this.ClientSize = new System.Drawing.Size(661, 234);
             this.Controls.Add(this.btnPobrisi);
             this.Controls.Add(this.btnSpremi);
             this.Controls.Add(this.gbClanarina);
@@ -212,6 +214,7 @@
             this.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(670, 253);
             this.Name = "frmUnosClana";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
@@ -230,8 +233,8 @@
         private System.Windows.Forms.TextBox txtIme;
         private System.Windows.Forms.Label lblPrezime;
         private System.Windows.Forms.TextBox txtPrezime;
-        private System.Windows.Forms.TextBox txtAdresa;
-        private System.Windows.Forms.Label lblAdresa;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.TextBox txtTelefon;
         private System.Windows.Forms.Label lblTelefon;
         private System.Windows.Forms.GroupBox gbOsoba;

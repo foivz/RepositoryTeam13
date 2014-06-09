@@ -31,6 +31,7 @@
             this.dgvClanovi = new System.Windows.Forms.DataGridView();
             this.btnZatvori = new System.Windows.Forms.Button();
             this.panelPozadina = new System.Windows.Forms.Panel();
+            this.btnBrisi = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClanovi)).BeginInit();
             this.panelPozadina.SuspendLayout();
             this.SuspendLayout();
@@ -50,6 +51,7 @@
             this.dgvClanovi.ShowEditingIcon = false;
             this.dgvClanovi.Size = new System.Drawing.Size(699, 264);
             this.dgvClanovi.TabIndex = 2;
+            this.dgvClanovi.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClanovi_CellDoubleClick);
             // 
             // btnZatvori
             // 
@@ -58,12 +60,14 @@
             this.btnZatvori.Location = new System.Drawing.Point(631, 289);
             this.btnZatvori.Name = "btnZatvori";
             this.btnZatvori.Size = new System.Drawing.Size(75, 23);
-            this.btnZatvori.TabIndex = 8;
-            this.btnZatvori.Text = "&Zatvori";
+            this.btnZatvori.TabIndex = 9;
+            this.btnZatvori.Text = "Zatvori";
             this.btnZatvori.UseVisualStyleBackColor = true;
+            this.btnZatvori.Click += new System.EventHandler(this.btnZatvori_Click);
             // 
             // panelPozadina
             // 
+            this.panelPozadina.Controls.Add(this.btnBrisi);
             this.panelPozadina.Controls.Add(this.btnZatvori);
             this.panelPozadina.Controls.Add(this.dgvClanovi);
             this.panelPozadina.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -73,6 +77,17 @@
             this.panelPozadina.Size = new System.Drawing.Size(719, 324);
             this.panelPozadina.TabIndex = 9;
             // 
+            // btnBrisi
+            // 
+            this.btnBrisi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnBrisi.Location = new System.Drawing.Point(550, 289);
+            this.btnBrisi.Name = "btnBrisi";
+            this.btnBrisi.Size = new System.Drawing.Size(75, 23);
+            this.btnBrisi.TabIndex = 8;
+            this.btnBrisi.Text = "Briši";
+            this.btnBrisi.UseVisualStyleBackColor = true;
+            this.btnBrisi.Click += new System.EventHandler(this.btnBrisi_Click);
+            // 
             // frmPregledClanova
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -81,10 +96,12 @@
             this.ClientSize = new System.Drawing.Size(719, 324);
             this.Controls.Add(this.panelPozadina);
             this.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.MinimumSize = new System.Drawing.Size(694, 252);
             this.Name = "frmPregledClanova";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.Text = "Pregled članova";
+            this.Load += new System.EventHandler(this.frmPregledClanova_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvClanovi)).EndInit();
             this.panelPozadina.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -96,5 +113,6 @@
         private System.Windows.Forms.DataGridView dgvClanovi;
         private System.Windows.Forms.Button btnZatvori;
         private System.Windows.Forms.Panel panelPozadina;
+        private System.Windows.Forms.Button btnBrisi;
     }
 }

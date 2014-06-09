@@ -49,7 +49,7 @@ namespace Baza_podataka
             {
                 return p_idZaposlenik;
             }
-            set
+            private set
             {
                 if (p_idZaposlenik != value) p_idZaposlenik = value;
             }
@@ -170,11 +170,11 @@ namespace Baza_podataka
         /// <summary>
         /// Dohvaća zaposlenika prema trazenom jedinstvenom identifikatoru
         /// </summary>
-        /// <param name="trazeniID">Jedinstveni identifikator zaposlenika</param>
+        /// <param name="trazeniID">Jedinstveni identifikator zaposlenika kao string</param>
         /// <returns>Zaposlenik</returns>
-        public static tablicaZaposlenik DohvatiZaposlenikaPrekoID(int trazeniID)
+        public static tablicaZaposlenik DohvatiZaposlenikaPrekoID(string trazeniID)
         {
-            string sqlUpit = "SELECT * FROM Zaposlenik WHERE idZaposlenik = " + trazeniID.ToString();
+            string sqlUpit = "SELECT * FROM Zaposlenik WHERE idZaposlenik = " + trazeniID;
             tablicaZaposlenik zap = new tablicaZaposlenik(Baza_podataka.Instance.DohvatiDataReader(sqlUpit));
             return zap;
         }

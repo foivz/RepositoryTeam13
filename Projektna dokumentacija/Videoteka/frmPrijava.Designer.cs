@@ -116,6 +116,7 @@
             this.Controls.Add(this.txtLozinka);
             this.Controls.Add(this.txtKorisnikoIme);
             this.Controls.Add(this.btnPrijava);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmPrijava";

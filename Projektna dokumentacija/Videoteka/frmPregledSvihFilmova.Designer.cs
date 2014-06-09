@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panelPozadina = new System.Windows.Forms.Panel();
+            this.btnBrisi = new System.Windows.Forms.Button();
             this.btnZatvori = new System.Windows.Forms.Button();
             this.dgvFilmovi = new System.Windows.Forms.DataGridView();
             this.panelPozadina.SuspendLayout();
@@ -37,6 +38,7 @@
             // 
             // panelPozadina
             // 
+            this.panelPozadina.Controls.Add(this.btnBrisi);
             this.panelPozadina.Controls.Add(this.btnZatvori);
             this.panelPozadina.Controls.Add(this.dgvFilmovi);
             this.panelPozadina.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -46,6 +48,17 @@
             this.panelPozadina.Size = new System.Drawing.Size(755, 282);
             this.panelPozadina.TabIndex = 10;
             // 
+            // btnBrisi
+            // 
+            this.btnBrisi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnBrisi.Location = new System.Drawing.Point(586, 247);
+            this.btnBrisi.Name = "btnBrisi";
+            this.btnBrisi.Size = new System.Drawing.Size(75, 23);
+            this.btnBrisi.TabIndex = 8;
+            this.btnBrisi.Text = "Briši";
+            this.btnBrisi.UseVisualStyleBackColor = true;
+            this.btnBrisi.Click += new System.EventHandler(this.btnBrisi_Click);
+            // 
             // btnZatvori
             // 
             this.btnZatvori.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -53,9 +66,10 @@
             this.btnZatvori.Location = new System.Drawing.Point(667, 247);
             this.btnZatvori.Name = "btnZatvori";
             this.btnZatvori.Size = new System.Drawing.Size(75, 23);
-            this.btnZatvori.TabIndex = 8;
-            this.btnZatvori.Text = "&Zatvori";
+            this.btnZatvori.TabIndex = 9;
+            this.btnZatvori.Text = "Zatvori";
             this.btnZatvori.UseVisualStyleBackColor = true;
+            this.btnZatvori.Click += new System.EventHandler(this.btnZatvori_Click);
             // 
             // dgvFilmovi
             // 
@@ -72,6 +86,7 @@
             this.dgvFilmovi.ShowEditingIcon = false;
             this.dgvFilmovi.Size = new System.Drawing.Size(735, 222);
             this.dgvFilmovi.TabIndex = 2;
+            this.dgvFilmovi.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFilmovi_CellDoubleClick);
             // 
             // frmPregledSvihFilmova
             // 
@@ -81,10 +96,12 @@
             this.ClientSize = new System.Drawing.Size(755, 282);
             this.Controls.Add(this.panelPozadina);
             this.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.MinimumSize = new System.Drawing.Size(694, 252);
             this.Name = "frmPregledSvihFilmova";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.Text = "Pregled svih filmova";
+            this.Load += new System.EventHandler(this.frmPregledSvihFilmova_Load);
             this.panelPozadina.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvFilmovi)).EndInit();
             this.ResumeLayout(false);
@@ -96,5 +113,6 @@
         private System.Windows.Forms.Panel panelPozadina;
         private System.Windows.Forms.Button btnZatvori;
         private System.Windows.Forms.DataGridView dgvFilmovi;
+        private System.Windows.Forms.Button btnBrisi;
     }
 }
