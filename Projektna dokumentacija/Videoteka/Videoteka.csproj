@@ -32,6 +32,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Baza_podataka">
+      <HintPath>..\Baza_podataka\bin\Debug\Baza_podataka.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -118,6 +121,21 @@
     <EmbeddedResource Include="frmPosudbaNova.resx">
       <DependentUpon>frmPosudbaNova.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmPregledClanova.resx">
+      <DependentUpon>frmPregledClanova.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPregledPosudjenihFilmovaPojedinogClana.resx">
+      <DependentUpon>frmPregledPosudjenihFilmovaPojedinogClana.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPregledPosudjenihFilmovaSvihClanova.resx">
+      <DependentUpon>frmPregledPosudjenihFilmovaSvihClanova.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPregledSvihFilmova.resx">
+      <DependentUpon>frmPregledSvihFilmova.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPregledZaposlenika.resx">
+      <DependentUpon>frmPregledZaposlenika.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmPrijava.resx">
       <DependentUpon>frmPrijava.cs</DependentUpon>
     </EmbeddedResource>
@@ -145,6 +163,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="VideotekaBaza.db">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

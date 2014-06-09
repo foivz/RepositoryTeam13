@@ -29,89 +29,102 @@
         private void InitializeComponent()
         {
             this.btnPrijava = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.btnZatvori = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
+            this.txtKorisnikoIme = new System.Windows.Forms.TextBox();
+            this.lblKorisnickoIme = new System.Windows.Forms.Label();
+            this.txtLozinka = new System.Windows.Forms.TextBox();
+            this.lblLozinka = new System.Windows.Forms.Label();
+            this.btnOdustani = new System.Windows.Forms.Button();
+            this.lblNaslov = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnPrijava
             // 
-            this.btnPrijava.Location = new System.Drawing.Point(135, 175);
+            this.btnPrijava.Location = new System.Drawing.Point(111, 165);
             this.btnPrijava.Name = "btnPrijava";
-            this.btnPrijava.Size = new System.Drawing.Size(75, 23);
-            this.btnPrijava.TabIndex = 0;
+            this.btnPrijava.Size = new System.Drawing.Size(97, 23);
+            this.btnPrijava.TabIndex = 3;
             this.btnPrijava.Text = "Prijavi se";
             this.btnPrijava.UseVisualStyleBackColor = true;
             this.btnPrijava.Click += new System.EventHandler(this.btnPrijava_Click);
             // 
-            // textBox1
+            // txtKorisnikoIme
             // 
-            this.textBox1.Location = new System.Drawing.Point(191, 92);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 1;
+            this.txtKorisnikoIme.Location = new System.Drawing.Point(189, 86);
+            this.txtKorisnikoIme.Name = "txtKorisnikoIme";
+            this.txtKorisnikoIme.Size = new System.Drawing.Size(124, 20);
+            this.txtKorisnikoIme.TabIndex = 1;
+            this.txtKorisnikoIme.Text = "admin";
             // 
-            // label1
+            // lblKorisnickoIme
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(110, 95);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Korisničko ime";
+            this.lblKorisnickoIme.AutoSize = true;
+            this.lblKorisnickoIme.Location = new System.Drawing.Point(108, 89);
+            this.lblKorisnickoIme.Name = "lblKorisnickoIme";
+            this.lblKorisnickoIme.Size = new System.Drawing.Size(75, 13);
+            this.lblKorisnickoIme.TabIndex = 2;
+            this.lblKorisnickoIme.Text = "Korisničko ime";
             // 
-            // textBox2
+            // txtLozinka
             // 
-            this.textBox2.Location = new System.Drawing.Point(191, 118);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 1;
+            this.txtLozinka.Location = new System.Drawing.Point(189, 112);
+            this.txtLozinka.Name = "txtLozinka";
+            this.txtLozinka.PasswordChar = '*';
+            this.txtLozinka.Size = new System.Drawing.Size(124, 20);
+            this.txtLozinka.TabIndex = 2;
+            this.txtLozinka.Text = "admin";
             // 
-            // label2
+            // lblLozinka
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(110, 121);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Lozinka";
+            this.lblLozinka.AutoSize = true;
+            this.lblLozinka.Location = new System.Drawing.Point(108, 115);
+            this.lblLozinka.Name = "lblLozinka";
+            this.lblLozinka.Size = new System.Drawing.Size(44, 13);
+            this.lblLozinka.TabIndex = 2;
+            this.lblLozinka.Text = "Lozinka";
             // 
-            // btnZatvori
+            // btnOdustani
             // 
-            this.btnZatvori.Location = new System.Drawing.Point(216, 175);
-            this.btnZatvori.Name = "btnZatvori";
-            this.btnZatvori.Size = new System.Drawing.Size(75, 23);
-            this.btnZatvori.TabIndex = 3;
-            this.btnZatvori.Text = "Zatvori";
-            this.btnZatvori.UseVisualStyleBackColor = true;
-            this.btnZatvori.Click += new System.EventHandler(this.btnZatvori_Click);
+            this.btnOdustani.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnOdustani.Location = new System.Drawing.Point(214, 165);
+            this.btnOdustani.Name = "btnOdustani";
+            this.btnOdustani.Size = new System.Drawing.Size(97, 23);
+            this.btnOdustani.TabIndex = 4;
+            this.btnOdustani.Text = "Odustani";
+            this.btnOdustani.UseVisualStyleBackColor = true;
+            this.btnOdustani.Click += new System.EventHandler(this.btnOdustani_Click);
             // 
-            // label3
+            // lblNaslov
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(91, 57);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(237, 13);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Unesite svoje podatke kako bi pristupili aplikaciji!";
+            this.lblNaslov.AutoSize = true;
+            this.lblNaslov.Location = new System.Drawing.Point(93, 45);
+            this.lblNaslov.Name = "lblNaslov";
+            this.lblNaslov.Size = new System.Drawing.Size(237, 13);
+            this.lblNaslov.TabIndex = 4;
+            this.lblNaslov.Text = "Unesite svoje podatke kako bi pristupili aplikaciji!";
             // 
             // frmPrijava
             // 
+            this.AcceptButton = this.btnPrijava;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(430, 278);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.btnZatvori);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.CancelButton = this.btnOdustani;
+            this.ClientSize = new System.Drawing.Size(430, 249);
+            this.Controls.Add(this.lblNaslov);
+            this.Controls.Add(this.btnOdustani);
+            this.Controls.Add(this.lblLozinka);
+            this.Controls.Add(this.lblKorisnickoIme);
+            this.Controls.Add(this.txtLozinka);
+            this.Controls.Add(this.txtKorisnikoIme);
             this.Controls.Add(this.btnPrijava);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmPrijava";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Prijava u sustav";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmPrijava_FormClosing);
+            this.Load += new System.EventHandler(this.frmPrijava_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -120,11 +133,11 @@
         #endregion
 
         private System.Windows.Forms.Button btnPrijava;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnZatvori;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtKorisnikoIme;
+        private System.Windows.Forms.Label lblKorisnickoIme;
+        private System.Windows.Forms.TextBox txtLozinka;
+        private System.Windows.Forms.Label lblLozinka;
+        private System.Windows.Forms.Button btnOdustani;
+        private System.Windows.Forms.Label lblNaslov;
     }
 }

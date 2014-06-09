@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
+
 using System.Text;
-using System.Threading.Tasks;
+
 using System.Windows.Forms;
 
 namespace Videoteka
@@ -19,6 +19,7 @@ namespace Videoteka
 
         private void posudbaNovaToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            // ucitavanje forme
             frmPosudbaNova frmPosudbaNova = new frmPosudbaNova();
             frmPosudbaNova.MdiParent = this;
             frmPosudbaNova.Show();
@@ -26,6 +27,7 @@ namespace Videoteka
 
         private void posudbaVracanjeToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            // ucitavanje forme
             frmPosudbaVracanje frmPosudbaVracanje = new frmPosudbaVracanje();
             frmPosudbaVracanje.MdiParent = this;
             frmPosudbaVracanje.Show();
@@ -33,6 +35,7 @@ namespace Videoteka
 
         private void pregledPosudSvihFilmovaToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            // ucitavanje forme
             frmPregledPosudjenihFilmovaSvihClanova frmPregledPosudjenihFilmovaSvihClanova = new frmPregledPosudjenihFilmovaSvihClanova();
             frmPregledPosudjenihFilmovaSvihClanova.MdiParent = this;
             frmPregledPosudjenihFilmovaSvihClanova.Show();
@@ -40,6 +43,7 @@ namespace Videoteka
 
         private void pregledPosudPremaClanuToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            // ucitavanje forme
             frmPregledPosudjenihFilmovaPojedinogClana frmPregledPosudjenihFilmovaPojedinogClana = new frmPregledPosudjenihFilmovaPojedinogClana();
             frmPregledPosudjenihFilmovaPojedinogClana.MdiParent = this;
             frmPregledPosudjenihFilmovaPojedinogClana.Show();
@@ -47,6 +51,7 @@ namespace Videoteka
 
         private void pregledSvihFilmovaToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            // ucitavanje forme
             frmPregledSvihFilmova frmPregledSvihFilmova = new frmPregledSvihFilmova();
             frmPregledSvihFilmova.MdiParent = this;
             frmPregledSvihFilmova.Show();
@@ -54,6 +59,7 @@ namespace Videoteka
 
         private void pregledZaposlenikaToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            // ucitavanje forme
             frmPregledZaposlenika frmPregledZaposlenika = new frmPregledZaposlenika();
             frmPregledZaposlenika.MdiParent = this;
             frmPregledZaposlenika.Show();
@@ -61,6 +67,7 @@ namespace Videoteka
 
         private void pregledClanovaToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            // ucitavanje forme
             frmPregledClanova frmPregledClanova = new frmPregledClanova();
             frmPregledClanova.MdiParent = this;
             frmPregledClanova.Show();
@@ -68,6 +75,7 @@ namespace Videoteka
 
         private void unosClanovaToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            // ucitavanje forme
             frmUnosClana frmUnosClana = new frmUnosClana();
             frmUnosClana.MdiParent = this;
             frmUnosClana.Show();
@@ -75,6 +83,7 @@ namespace Videoteka
 
         private void unosFilmovaToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            // ucitavanje forme
             frmUnosFilma frmUnosFilma = new frmUnosFilma();
             frmUnosFilma.MdiParent = this;
             frmUnosFilma.Show();
@@ -82,13 +91,34 @@ namespace Videoteka
 
         private void frmPocetna_Load(object sender, EventArgs e)
         {
+            // ucitavanje forme za prijavu
             frmPrijava frmPrijava = new frmPrijava();
             frmPrijava.ShowDialog();
         }
 
         private void odjavaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Close();
+            // odjava -> prikaz forme za ponovnu prijavu
+            frmPocetna_Load(null, null);
+        }
+
+        private void pomocONamaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // pokazi poruku o nama
+            MessageBox.Show("Aplikaciju za kolegij Programsko inženjerstvo izradili članovi tima CC.", "O nama", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void pomocDokumentacijaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // pokreni dokumentaciju
+                System.Diagnostics.Process.Start("dokumentacija.pdf");
+            }
+            catch // u slucaju pogreske
+            {
+                pomocONamaToolStripMenuItem_Click(null,null);
+            }
         }
 
     }
