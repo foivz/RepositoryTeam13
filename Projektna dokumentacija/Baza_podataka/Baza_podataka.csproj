@@ -39,13 +39,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Baza_podataka.cs" />
+    <Compile Include="pogledPosudba.cs" />
+    <Compile Include="pogledZaposlenici.cs" />
+    <Compile Include="pogledClanovi.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="tablicaClan.cs" />
     <Compile Include="tablicaFilm.cs" />
     <Compile Include="tablicaOsoba.cs" />
     <Compile Include="tablicaPosudba.cs" />
     <Compile Include="tablicaVrsta_filma.cs" />
-    <Compile Include="tablicaZalihe.cs" />
     <Compile Include="tablicaZaposlenik.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

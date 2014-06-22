@@ -169,13 +169,23 @@ namespace Baza_podataka
         }
 
         /// <summary>
+        /// Dohvaća člana koji je zadnji dodan u bazu
+        /// </summary>
+        /// <returns>Član</returns>
+        public int DohvatiZadnjiID()
+        {
+            string sqlUpit = "SELECT MAX(idClan) FROM Clan";
+            return int.Parse(Baza_podataka.Instance.DohvatiVrijednost(sqlUpit).ToString());
+        }
+
+        /// <summary>
         /// Dohvaća clana prema trazenom jedinstvenom identifikatoru
         /// </summary>
-        /// <param name="trazeniID">Jedinstveni identifikator clana</param>
+        /// <param name="trazeniID">Jedinstveni identifikator clana prosljedjen kao string</param>
         /// <returns>Clan</returns>
-        public static tablicaClan DohvatiClanaPrekoID(int trazeniID)
+        public static tablicaClan DohvatiClanaPrekoID(string trazeniID)
         {
-            string sqlUpit = "SELECT * FROM Clan WHERE idClan = " + trazeniID.ToString();
+            string sqlUpit = "SELECT * FROM Clan WHERE idClan = " + trazeniID;
             tablicaClan clan = new tablicaClan(Baza_podataka.Instance.DohvatiDataReader(sqlUpit));
             return clan;
         }

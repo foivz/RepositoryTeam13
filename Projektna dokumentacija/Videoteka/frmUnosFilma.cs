@@ -34,6 +34,7 @@ namespace Videoteka
             {
                 txtNaziv.Text = film.naziv;
                 txtTrajanje.Text = film.trajanje_u_min.ToString();
+                txtKolicina.Text = film.kolicina_zaliha.ToString();
                 txtSadrzaj.Text = film.sadrzaj;
                 cbVrsta.SelectedValue = film.idVrsta_filma;
             }
@@ -52,7 +53,6 @@ namespace Videoteka
 
         }
 
-
         private void txtTrajanje_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsDigit(e.KeyChar) && e.KeyChar != Convert.ToChar(Keys.Back))
@@ -63,17 +63,9 @@ namespace Videoteka
 
         private void btnSpremi_Click(object sender, EventArgs e)
         {
-            if (txtNaziv.Text == "" || txtTrajanje.Text == "" || txtSadrzaj.Text == "")
+            if (txtNaziv.Text == "" || txtKolicina.Text == "" || txtTrajanje.Text == "" || txtSadrzaj.Text == "")
             {
                 MessageBox.Show("Prije pohrane morate popuniti sva polja!", "Pogreška...", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
-            }
-            float provjera;
-            float.TryParse(txtTrajanje.Text, out provjera); // provjera unosa trajanja filma da su samo brojevi
-            if (provjera == 0) // 0 pogreska
-            {
-                MessageBox.Show("Neispravan unos trajanja filma!", "Pogreška...", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                txtTrajanje.Focus();
                 return;
             }
 
@@ -92,6 +84,7 @@ namespace Videoteka
                 film.naziv = txtNaziv.Text;
                 film.sadrzaj = txtSadrzaj.Text;
                 film.trajanje_u_min = int.Parse(txtTrajanje.Text);
+                film.kolicina_zaliha = int.Parse(txtKolicina.Text);
                 film.idVrsta_filma = int.Parse(cbVrsta.SelectedValue.ToString());
 
                 film.Spremi();
@@ -127,10 +120,12 @@ namespace Videoteka
             {
                 txtNaziv.Text = "";
                 txtTrajanje.Text = "120";
+                txtKolicina.Text = "1";
                 txtSadrzaj.Text = "";
                 cbVrsta.SelectedIndex = 0;
                 txtNaziv.Focus();
             }
         }
+
     }
 }

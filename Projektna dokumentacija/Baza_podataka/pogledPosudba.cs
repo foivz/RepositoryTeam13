@@ -179,7 +179,7 @@ namespace Baza_podataka
         public static List<pogledPosudba> DohvatiSvePosudbe(string dodatak="")
         {
             List<pogledPosudba> lista = new List<pogledPosudba>();
-            string sqlUpit = "select idPosudba,p.Clan_idClan,p.Film_idFilm,ime,prezime,email,telefon,datum_posudbe,posudjen_do,datum_vracanja,f.naziv from Posudba p LEFT OUTER JOIN Clan c ON p.Clan_idClan = c.idClan LEFT OUTER JOIN Osoba o ON o.idOsoba = c.idOsoba LEFT OUTER JOIN Film f ON f.idFilm = p.Film_idFilm " + dodatak + "Group by 1;";
+            string sqlUpit = "select idPosudba,p.Clan_idClan,p.Film_idFilm,ime,prezime,email,telefon,datum_posudbe,posudjen_do,datum_vracanja,f.naziv from Posudba p LEFT OUTER JOIN Clan c ON p.Clan_idClan = c.idClan LEFT OUTER JOIN Osoba o ON o.idOsoba = c.idOsoba LEFT OUTER JOIN Film f ON f.idFilm = p.Film_idFilm " + dodatak + " Group by 1;";
             DbDataReader dr = Baza_podataka.Instance.DohvatiDataReader(sqlUpit);
             while (dr.Read())
             {
@@ -207,6 +207,31 @@ namespace Baza_podataka
             {
                 pogledPosudba pos = new pogledPosudba(dr);
                 lista.Add(pos);
+            }
+            dr.Close();
+            return lista;
+        }
+
+        /// <summary>
+        /// Dohvaća sve posudbe do odabranog datuma i dohvaća sve potrebne podatke iz ostalih tablica i vraća ih u obliku generičke liste
+        /// </summary>
+        /// <param name="trazeniID">Jedinstveni identifikator clana prosljedjen kao string</param>
+        /// <param name="ne_vracene_samo">Dohvat filmova koji nisu vraćeni ako je true</param>
+        /// <returns>Lista svih posudbi nekog clana prosirena s atributima ostalih tablica s kojima je vezana</returns>
+        public static List<pogledPosudba> DohvatiSvePosudbePremaRoku(double dana)
+        {
+            List<pogledPosudba> lista = new List<pogledPosudba>();
+            DateTime datumSada = DateTime.Now.AddDays(dana);
+            string sqlUpit = "select idPosudba,p.Clan_idClan,p.Film_idFilm,ime,prezime,email,telefon,datum_posudbe,posudjen_do,datum_vracanja,f.naziv from Posudba p LEFT OUTER JOIN Clan c ON p.Clan_idClan = c.idClan LEFT OUTER JOIN Osoba o ON o.idOsoba = c.idOsoba LEFT OUTER JOIN Film f ON f.idFilm = p.Film_idFilm where datum_vracanja='' Group by 1;";
+            DbDataReader dr = Baza_podataka.Instance.DohvatiDataReader(sqlUpit);
+            while (dr.Read())
+            {
+                pogledPosudba pos = new pogledPosudba(dr);
+                DateTime datumBaza = DateTime.Parse(pos.posudjen_do);
+                if (datumSada.ToShortDateString() == datumBaza.ToShortDateString())
+                {
+                    lista.Add(pos);
+                }
             }
             dr.Close();
             return lista;

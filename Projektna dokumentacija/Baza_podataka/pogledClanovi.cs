@@ -166,6 +166,50 @@ namespace Baza_podataka
         }
 
         /// <summary>
+        /// Dohvaća sve clanove i osobe kojima ističe članarina za 2 dana iz baze i vraća ih u obliku generičke liste
+        /// </summary>
+        /// <returns>Lista clanova prosirena s atributima tablice osoba s kojom je vezana</returns>
+        public static List<pogledClanovi> DohvatiClanoveIstekClanarine()
+        {
+            List<pogledClanovi> lista = new List<pogledClanovi>();
+            DateTime datumSada1 = DateTime.Now.AddDays(1); // za 1 dan
+            DateTime datumSada2 = DateTime.Now.AddDays(2); // za 2 dana
+            string sqlUpit = "select Clan.idOsoba,idClan,ime,prezime,email,telefon,datum_uclanjenja,MjClanarina,datum_isteka_clanarine from Clan LEFT OUTER JOIN Osoba ON Osoba.idOsoba = Clan.idOsoba Group by 1;";
+            DbDataReader dr = Baza_podataka.Instance.DohvatiDataReader(sqlUpit);
+            while (dr.Read())
+            {
+                pogledClanovi clan = new pogledClanovi(dr);
+                DateTime datumBaza = DateTime.Parse(clan.datum_isteka_clanarine);
+                // istek za 1 ili 2 dana
+                if (datumSada1.ToShortDateString() == datumBaza.ToShortDateString() || datumSada2.ToShortDateString() == datumBaza.ToShortDateString())
+                {
+                    lista.Add(clan);
+                }
+            }
+            dr.Close();
+            return lista;
+        }
+
+        /// <summary>
+        /// Dohvaća clana iz baze i vraća ih u obliku generičke liste
+        /// </summary>
+        /// <param name="trazeniID">Jedinstveni identifikator clana</param>
+        /// <returns>Lista podataka o clanu prosirena s atributima tablice osoba s kojom je vezana</returns>
+        public static List<pogledClanovi> DohvatiClanaPremaID(string trazeniID)
+        {
+            List<pogledClanovi> lista = new List<pogledClanovi>();
+            string sqlUpit = "select Clan.idOsoba,idClan,ime,prezime,email,telefon,datum_uclanjenja,MjClanarina,datum_isteka_clanarine from Clan LEFT OUTER JOIN Osoba ON Osoba.idOsoba = Clan.idOsoba where idClan = " + trazeniID + " Group by 1;";
+            DbDataReader dr = Baza_podataka.Instance.DohvatiDataReader(sqlUpit);
+            while (dr.Read())
+            {
+                pogledClanovi clan = new pogledClanovi(dr);
+                lista.Add(clan);
+            }
+            dr.Close();
+            return lista;
+        }
+
+        /// <summary>
         /// Metoda koja nadjačava ToString metodu
         /// </summary>
         /// <returns>Ime i prezime osobe</returns>

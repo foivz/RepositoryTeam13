@@ -53,9 +53,10 @@
             this.btnZatvori.Location = new System.Drawing.Point(691, 232);
             this.btnZatvori.Name = "btnZatvori";
             this.btnZatvori.Size = new System.Drawing.Size(75, 23);
-            this.btnZatvori.TabIndex = 8;
-            this.btnZatvori.Text = "&Zatvori";
+            this.btnZatvori.TabIndex = 9;
+            this.btnZatvori.Text = "Zatvori";
             this.btnZatvori.UseVisualStyleBackColor = true;
+            this.btnZatvori.Click += new System.EventHandler(this.btnZatvori_Click);
             // 
             // dgvZaposlenici
             // 
@@ -81,10 +82,12 @@
             this.ClientSize = new System.Drawing.Size(779, 267);
             this.Controls.Add(this.panelPozadina);
             this.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.MinimumSize = new System.Drawing.Size(694, 252);
             this.Name = "frmPregledZaposlenika";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.Text = "Pregled zaposlenika";
+            this.Load += new System.EventHandler(this.frmPregledZaposlenika_Load);
             this.panelPozadina.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvZaposlenici)).EndInit();
             this.ResumeLayout(false);

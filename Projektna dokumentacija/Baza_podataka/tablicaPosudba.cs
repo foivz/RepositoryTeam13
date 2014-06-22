@@ -65,7 +65,7 @@ namespace Baza_podataka
             {
                 return p_Clan_idClan;
             }
-            private set
+            set
             {
                 if (p_Clan_idClan != value) p_Clan_idClan = value;
             }
@@ -171,7 +171,7 @@ namespace Baza_podataka
         /// Dohvaća sve posudjene filmove iz baze i vraća ih u obliku generičke liste
         /// </summary>
         /// <returns>Lista posudjenih filmova</returns>
-        public static List<tablicaPosudba> DohvatiPosudbe()
+        public static List<tablicaPosudba> DohvatiSvePosudbe()
         {
             List<tablicaPosudba> lista = new List<tablicaPosudba>();
             string sqlUpit = "SELECT * FROM Posudba";
@@ -180,11 +180,32 @@ namespace Baza_podataka
             {
                 tablicaPosudba pos = new tablicaPosudba(dr);
                 lista.Add(pos);
-            }            
+            }
             dr.Close();
             return lista;
         }
 
+        /// <summary>
+        /// Dohvaća posudbu prema trazenom jedinstvenom identifikatoru
+        /// </summary>
+        /// <param name="trazeniID">Jedinstveni identifikator posudbe kao string</param>
+        /// <returns>Posudba</returns>
+        public static tablicaPosudba DohvatiPosudbuPrekoID(string trazeniID)
+        {
+            string sqlUpit = "SELECT * FROM Posudba WHERE idPosudba = " + trazeniID;
+            tablicaPosudba pos = new tablicaPosudba(Baza_podataka.Instance.DohvatiDataReader(sqlUpit));
+            return pos;
+        }
+
+        /// <summary>
+        /// Dohvaća posudbu koja je zadnja dodana u bazu
+        /// </summary>
+        /// <returns>Posudba</returns>
+        public int DohvatiZadnjiID()
+        {
+            string sqlUpit = "SELECT MAX(idPosudba) FROM Posudba";
+            return int.Parse(Baza_podataka.Instance.DohvatiVrijednost(sqlUpit).ToString());
+        }
 
         /// <summary>
         /// Metoda koja nadjačava ToString metodu

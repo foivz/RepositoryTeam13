@@ -53,7 +53,6 @@
             this.txtKorisnikoIme.Name = "txtKorisnikoIme";
             this.txtKorisnikoIme.Size = new System.Drawing.Size(124, 20);
             this.txtKorisnikoIme.TabIndex = 1;
-            this.txtKorisnikoIme.Text = "admin";
             // 
             // lblKorisnickoIme
             // 
@@ -71,7 +70,6 @@
             this.txtLozinka.PasswordChar = '*';
             this.txtLozinka.Size = new System.Drawing.Size(124, 20);
             this.txtLozinka.TabIndex = 2;
-            this.txtLozinka.Text = "admin";
             // 
             // lblLozinka
             // 
@@ -116,6 +114,7 @@
             this.Controls.Add(this.txtLozinka);
             this.Controls.Add(this.txtKorisnikoIme);
             this.Controls.Add(this.btnPrijava);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmPrijava";
