@@ -234,7 +234,7 @@ namespace Baza_podataka
         public static List<tablicaFilm> pogledDohvatiFilmove(string dodatak="")
         {
             List<tablicaFilm> lista = new List<tablicaFilm>();
-            string sqlUpit = "SELECT idFilm,Film.naziv,sadrzaj,trajanje_u_min,kolicina_zaliha,Film.idVrsta_filma,v.naziv as 'vrsta', (Film.kolicina_zaliha-(select count(*) from Posudba p where Film.idFilm=p.Film_idFilm and p.datum_vracanja='')) as 'stanje' FROM Film LEFT OUTER JOIN Vrsta_filma v ON Film.idVrsta_filma = v.idVrsta_filma " + (dodatak != "" ? dodatak : "") + " Group by 1;";
+            string sqlUpit = "SELECT idFilm,Film.naziv,sadrzaj,trajanje_u_min,kolicina_zaliha,Film.idVrsta_filma,v.naziv as 'vrsta', (Film.kolicina_zaliha-(select count(*) from Posudba p where Film.idFilm=p.Film_idFilm)) as 'stanje' FROM Film LEFT OUTER JOIN Vrsta_filma v ON Film.idVrsta_filma = v.idVrsta_filma " + (dodatak != "" ? dodatak : "") + " Group by 1;";
             DbDataReader dr = Baza_podataka.Instance.DohvatiDataReader(sqlUpit);
             while (dr.Read())
             {
@@ -256,19 +256,6 @@ namespace Baza_podataka
             tablicaFilm film = new tablicaFilm(Baza_podataka.Instance.DohvatiDataReader(sqlUpit));
             return film;
         }
-
-        /// <summary>
-        /// Dohvaća stanje zaliha i informacije o filmu prema trazenom jedinstvenom identifikatoru
-        /// </summary>
-        /// <param name="trazeniFilm">Jedinstveni identifikator filma kao string</param>
-        /// <returns>Film</returns>
-        public static tablicaFilm DohvatiStanjeZalihaZaFilm(string trazeniFilm)
-        {
-            string sqlUpit = "SELECT idFilm,Film.naziv,sadrzaj,trajanje_u_min,kolicina_zaliha,Film.idVrsta_filma,v.naziv as 'vrsta', (Film.kolicina_zaliha-(select count(*) from Posudba p where Film.idFilm=p.Film_idFilm and p.datum_vracanja='')) as 'stanje' FROM Film LEFT OUTER JOIN Vrsta_filma v ON Film.idVrsta_filma = v.idVrsta_filma WHERE Film.idFilm = " + trazeniFilm + " Group by 1;";
-            tablicaFilm film = new tablicaFilm(Baza_podataka.Instance.DohvatiDataReader(sqlUpit),true);
-            return film;
-        }
-
 
         /// <summary>
         /// Metoda koja nadjačava ToString metodu
