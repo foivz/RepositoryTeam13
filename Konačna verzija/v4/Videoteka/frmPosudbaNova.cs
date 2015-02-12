@@ -21,6 +21,15 @@ namespace Videoteka
         {
             try
             {
+                // provjera da li ima u zalihama filmova
+                tablicaFilm film = tablicaFilm.DohvatiStanjeZalihaZaFilm(dgvFilmovi.SelectedRows[0].Cells["colIDFilma"].Value.ToString());
+                if (film.stanje <= 0)
+                {
+                    MessageBox.Show("Posudba nije moguća zato što nema raspoloživih filmova u zalihama!", "Pogreška", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                // nastavak posudbe
                 // stvaranje objekta za rad s tablicom Posudba
                 tablicaPosudba posudba = new tablicaPosudba();
 
